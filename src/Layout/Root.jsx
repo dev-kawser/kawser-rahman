@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import Footer from "../Shared/Footer/Footer";
 
 AOS.init();
 
@@ -9,7 +10,7 @@ const Root = () => {
     return (
         <div>
             <Outlet></Outlet>
-            <div>Footer</div>
+            <Footer></Footer>
         </div>
     );
 };
