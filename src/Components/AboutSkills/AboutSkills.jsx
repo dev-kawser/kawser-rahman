@@ -17,11 +17,11 @@ import ssl from "../../assets/images/ssl.png"
 
 const AboutSkills = () => {
     return (
-        <div className="lg:max-w-2xl max-w-xl lg:mx-auto mx-3 mt-16">
+        <div className="lg:max-w-2xl max-w-xl lg:mx-auto mx-3 mt-20 lg:mt-28">
             <div>
                 <div>
                     <h4 className="league-spartan lg:text-left text-center text-3xl font-bold">About Me</h4>
-                    <p className="roboto mt-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    <p className="roboto mt-2 text-lg">Aspiring Front-End Developer with nearly a year of intensive learning and practical experience in HTML, CSS, JavaScript, and React. Dedicated to crafting responsive, user-centric web applications and continuously exploring emerging technologies. Driven to contribute and grow within a dynamic, collaborative team environment.</p>
                 </div>
                 <div className="mt-16">
                     <h4 className="league-spartan lg:text-left text-center text-3xl font-bold">My Skills</h4>
@@ -74,7 +74,7 @@ const AboutSkills = () => {
                                 className="size-10"
                                 src={react}
                                 alt="" />
-                            <p>REACT</p>
+                            <p>REACT JS</p>
                         </div>
                         <div className="flex items-center gap-2">
                             <img
@@ -84,7 +84,7 @@ const AboutSkills = () => {
                                 className="size-10"
                                 src={next}
                                 alt="" />
-                            <p>NEXT</p>
+                            <p>NEXT JS</p>
                         </div>
                         <div className="flex items-center gap-2">
                             <img

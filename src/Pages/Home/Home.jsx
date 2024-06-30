@@ -1,4 +1,5 @@
 import AboutSkills from "../../Components/AboutSkills/AboutSkills.jsx";
+import FeatureProjects from "../../Components/FeatureProjects/FeatureProjects.jsx";
 import Banner from "../../Shared/Banner/Banner.jsx";
 
 
@@ -10,6 +11,7 @@ const Home = () => {
                 h3={"WEB-developer"}
             ></Banner>
             <AboutSkills></AboutSkills>
+            <FeatureProjects></FeatureProjects>
         </div>
     );
 };

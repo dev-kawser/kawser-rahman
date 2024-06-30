@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { HiOutlineBars3BottomRight } from "react-icons/hi2";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/images/k-logo.png";
 import { IoClose } from 'react-icons/io5';
 
-
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation();
 
     const handleToggle = () => {
         setIsOpen(!isOpen);
@@ -25,7 +25,6 @@ const Navbar = () => {
                 </div>
             </div>
             {isOpen && (
-
                 <div
                     data-aos="slide-left"
                     data-aos-duration="1000"
@@ -40,40 +39,40 @@ const Navbar = () => {
                             data-aos-delay="100"
                             data-aos-duration="300"
                             to="/"
+                            className={`hover:line-through ${location.pathname === '/' ? 'line-through' : ''}`}
                         >
                             Home
                         </Link>
-
                         <Link
                             data-aos="slide-left"
                             data-aos-easing="ease-in-out"
                             data-aos-delay="200"
                             data-aos-duration="500"
                             to="/about"
+                            className={`hover:line-through ${location.pathname === '/about' ? 'line-through' : ''}`}
                         >
                             About
                         </Link>
-
                         <Link
                             data-aos="slide-left"
                             data-aos-easing="ease-in-out"
                             data-aos-delay="300"
                             data-aos-duration="700"
                             to="/projects"
+                            className={`hover:line-through ${location.pathname === '/projects' ? 'line-through' : ''}`}
                         >
                             Projects
                         </Link>
-
                         <Link
                             data-aos="slide-left"
                             data-aos-easing="ease-in-out"
                             data-aos-delay="500"
-                            ata-aos-duration="900"
+                            data-aos-duration="900"
                             to="/contact"
+                            className={`hover:line-through ${location.pathname === '/contact' ? 'line-through' : ''}`}
                         >
                             Contact
                         </Link>
-
                     </nav>
                 </div>
             )}
