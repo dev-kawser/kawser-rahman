@@ -1,7 +1,10 @@
 import { useState } from 'react';
-import project from "../../assets/images/project.jpg";
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+
+import project1 from "../../assets/images/feature3.png";
+import project2 from "../../assets/images/feature2.png";
+import project3 from "../../assets/images/feature1.png";
 
 const FeatureProjects = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,21 +20,27 @@ const FeatureProjects = () => {
         setSelectedProject(null);
     };
 
+    const projects = [
+        { id: 1, image: project1 },
+        { id: 2, image: project2 },
+        { id: 3, image: project3 }
+    ];
+
     return (
         <div className="mt-20 lg:mt-28 max-w-6xl lg:mx-auto mx-5 roboto">
             <h1 className='text-center text-5xl font-extrabold tracking-wider league uppercase'>
                 Recent Projects
             </h1>
             <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-                {[1, 2, 3].map((item, index) => (
+                {projects.map((project) => (
                     <div
-                        key={index}
-                        className="relative bg-cover bg-center h-96 rounded-lg"
-                        style={{ backgroundImage: `url(${project})` }}
+                        key={project.id}
+                        className="relative border-2 bg-cover bg-center bg-no-repeat h-96 rounded-lg"
+                        style={{ backgroundImage: `url(${project.image})` }}
                     >
                         <div className="absolute rounded-lg inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <button
-                                onClick={() => openModal(item)}
+                                onClick={() => openModal(project.id)}
                                 className="text-black text-lg bg-[#D9D9D9] px-3 py-2 uppercase"
                             >
                                 View Details
@@ -43,10 +52,10 @@ const FeatureProjects = () => {
 
             <div className='lg:mt-20 mt-10 flex justify-center'>
                 <div className='flex items-center gap-7'>
-                    <Link className='bg-[#D9D9D9] py-2 px-5 flex items-center gap-2'>
+                    <Link to="/all-projects" className='bg-[#D9D9D9] py-2 px-5 flex items-center gap-2'>
                         <FaArrowRight /> All Projects
                     </Link>
-                    <Link className='bg-[#D9D9D9] py-2 px-5 flex items-center gap-2'>
+                    <Link to="/contact" className='bg-[#D9D9D9] py-2 px-5 flex items-center gap-2'>
                         <FaArrowRight /> Contact me
                     </Link>
                 </div>
