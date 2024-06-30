@@ -25,18 +25,56 @@ const Navbar = () => {
                 </div>
             </div>
             {isOpen && (
-                <div>
-                    <div className="fixed inset-0 bg-white flex flex-col items-center justify-center z-50">
-                        <button className="text-5xl text-black absolute top-[20px] right-4 lg:top-[54px] lg:right-[79px]" onClick={handleToggle}>
-                            <IoClose />
-                        </button>
-                        <nav className="league-spartan flex flex-col gap-8 text-black font-bold lg:text-6xl text-5xl uppercase">
-                            <Link data-aos="fade-up" data-aos-delay="300" to="/">Home</Link>
-                            <Link data-aos="fade-up" data-aos-delay="500" to="/about">About</Link>
-                            <Link data-aos="fade-up" data-aos-delay="700" to="/projects">Projects</Link>
-                            <Link data-aos="fade-up" data-aos-delay="900" to="/contact">Contact</Link>
-                        </nav>
-                    </div>
+
+                <div
+                    data-aos="slide-left"
+                    data-aos-duration="1000"
+                    className="fixed inset-0 bg-white flex flex-col items-center justify-center z-50">
+                    <button className="text-5xl text-black absolute top-[20px] right-4 lg:top-[54px] lg:right-[79px]" onClick={handleToggle}>
+                        <IoClose />
+                    </button>
+                    <nav className="league-spartan flex flex-col gap-8 text-black font-bold lg:text-6xl text-5xl uppercase">
+                        <Link
+                            data-aos="slide-left"
+                            data-aos-easing="ease-in-out"
+                            data-aos-delay="100"
+                            data-aos-duration="300"
+                            to="/"
+                        >
+                            Home
+                        </Link>
+
+                        <Link
+                            data-aos="slide-left"
+                            data-aos-easing="ease-in-out"
+                            data-aos-delay="200"
+                            data-aos-duration="500"
+                            to="/about"
+                        >
+                            About
+                        </Link>
+
+                        <Link
+                            data-aos="slide-left"
+                            data-aos-easing="ease-in-out"
+                            data-aos-delay="300"
+                            data-aos-duration="700"
+                            to="/projects"
+                        >
+                            Projects
+                        </Link>
+
+                        <Link
+                            data-aos="slide-left"
+                            data-aos-easing="ease-in-out"
+                            data-aos-delay="500"
+                            ata-aos-duration="900"
+                            to="/contact"
+                        >
+                            Contact
+                        </Link>
+
+                    </nav>
                 </div>
             )}
         </div>
