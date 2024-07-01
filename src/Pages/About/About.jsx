@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import Banner from "../../Shared/Banner/Banner.jsx";
+import { FaArrowRight } from "react-icons/fa";
 
 const About = () => {
     return (
@@ -30,6 +32,13 @@ const About = () => {
                             Committed to lifelong learning and professional development, I am always eager to explore new technologies, frameworks, and programming languages. Collaboration and community are also important to me, as I enjoy working in team environments and participating in developer communities to share knowledge and learn from others.
                         </p>
                     </div>
+                </div>
+            </div>
+            <div className='lg:mt-20 mt-10 flex justify-center'>
+                <div>
+                    <Link to="/contact" className='bg-[#D9D9D9] py-2 px-5 flex items-center gap-2'>
+                        <FaArrowRight /> Contact me
+                    </Link>
                 </div>
             </div>
         </div>
