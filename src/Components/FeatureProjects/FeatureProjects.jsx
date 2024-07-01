@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-import project1 from "../../assets/images/feature3.png";
-import project2 from "../../assets/images/feature2.png";
-import project3 from "../../assets/images/feature1.png";
+import project1 from "../../assets/images/project1.png";
+import project2 from "../../assets/images/project2.png";
+import project3 from "../../assets/images/project5.png";
 
 const FeatureProjects = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,7 +27,7 @@ const FeatureProjects = () => {
     ];
 
     return (
-        <div className="mt-20 lg:mt-28 max-w-6xl lg:mx-auto mx-5 roboto">
+        <div className="mt-20 lg:mt-28 max-w-7xl lg:container lg:mx-auto mx-5 roboto">
             <h1 className='text-center text-5xl font-extrabold tracking-wider league uppercase'>
                 Recent Projects
             </h1>
@@ -35,13 +35,13 @@ const FeatureProjects = () => {
                 {projects.map((project) => (
                     <div
                         key={project.id}
-                        className="relative border-2 bg-cover bg-center bg-no-repeat h-96 rounded-lg"
+                        className="relative bg-cover bg-center bg-no-repeat h-96 w-auto lg:w-[500px] rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
                         style={{ backgroundImage: `url(${project.image})` }}
                     >
-                        <div className="absolute rounded-lg inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <button
                                 onClick={() => openModal(project.id)}
-                                className="text-black text-lg bg-[#D9D9D9] px-3 py-2 uppercase"
+                                className="text-white text-lg bg-black bg-opacity-75 px-5 py-3 uppercase rounded-md"
                             >
                                 View Details
                             </button>
@@ -52,10 +52,10 @@ const FeatureProjects = () => {
 
             <div className='lg:mt-20 mt-10 flex justify-center'>
                 <div className='flex items-center gap-7'>
-                    <Link to="/all-projects" className='bg-[#D9D9D9] py-2 px-5 flex items-center gap-2'>
+                    <Link to="/projects" className='bg-[#D9D9D9] py-2 px-5 flex items-center gap-2 rounded-md shadow hover:bg-gray-300 transition-colors duration-300'>
                         <FaArrowRight /> All Projects
                     </Link>
-                    <Link to="/contact" className='bg-[#D9D9D9] py-2 px-5 flex items-center gap-2'>
+                    <Link to="/contact" className='bg-[#D9D9D9] py-2 px-5 flex items-center gap-2 rounded-md shadow hover:bg-gray-300 transition-colors duration-300'>
                         <FaArrowRight /> Contact me
                     </Link>
                 </div>
@@ -63,12 +63,12 @@ const FeatureProjects = () => {
 
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                    <div data-aos="slide-down" className="bg-white mx-2 p-8 rounded-lg shadow-lg max-w-lg lg:mx-auto">
-                        <h2 className="text-2xl font-bold mb-4">Project {selectedProject} Details</h2>
-                        <p className="mb-4">Here you can add detailed information about Project {selectedProject}.</p>
+                    <div data-aos="slide-down" className="bg-white mx-2 p-8 rounded-lg shadow-lg max-w-lg lg:mx-auto animate-slide-down">
+                        <h2 className="text-3xl font-bold mb-4 text-center">Project {selectedProject} Details</h2>
+                        <p className="mb-4 text-lg text-gray-700">Here you can add detailed information about Project {selectedProject}.</p>
                         <button
                             onClick={closeModal}
-                            className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+                            className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300"
                         >
                             Close
                         </button>

@@ -1,0 +1,81 @@
+import { useState } from 'react';
+// import { FaArrowRight } from 'react-icons/fa';
+import Banner from "../../Shared/Banner/Banner.jsx";
+
+import project1 from "../../assets/images/project1.png";
+import project2 from "../../assets/images/project2.png";
+import project3 from "../../assets/images/project3.png";
+import project4 from "../../assets/images/project4.png";
+import project5 from "../../assets/images/project5.png";
+import project6 from "../../assets/images/project6.png";
+
+const Projects = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedProject, setSelectedProject] = useState(null);
+
+    const openModal = (projectNumber) => {
+        setSelectedProject(projectNumber);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setSelectedProject(null);
+    };
+
+    const projects = [
+        { id: 1, image: project1, title: 'Project One', description: 'A brief description of Project One.' },
+        { id: 2, image: project2, title: 'Project Two', description: 'A brief description of Project Two.' },
+        { id: 3, image: project3, title: 'Project Three', description: 'A brief description of Project Three.' },
+        { id: 4, image: project4, title: 'Project Four', description: 'A brief description of Project Four.' },
+        { id: 5, image: project5, title: 'Project Five', description: 'A brief description of Project Five.' },
+        { id: 6, image: project6, title: 'Project Six', description: 'A brief description of Project Six.' }
+    ];
+
+    return (
+        <div>
+            <Banner h1="MY PROJECTS" h3="MADE WITH LOVE" />
+
+            <div className="mt-20 lg:mt-28 max-w-7xl lg:container lg:mx-auto mx-5 roboto">
+                <h1 className='text-center text-5xl font-extrabold tracking-wider league uppercase'>
+                    All Projects
+                </h1>
+                <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {projects.map((project) => (
+                        <div
+                            key={project.id}
+                            className="relative bg-cover bg-center bg-no-repeat h-96 w-auto lg:w-[500px] rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+                            style={{ backgroundImage: `url(${project.image})` }}
+                        >
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button
+                                    onClick={() => openModal(project.id)}
+                                    className="text-white text-lg bg-black bg-opacity-75 px-5 py-3 uppercase rounded-md"
+                                >
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {isModalOpen && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                    <div data-aos="slide-down" className="bg-white mx-2 p-8 rounded-lg shadow-lg max-w-lg lg:mx-auto">
+                        <h2 className="text-3xl font-bold mb-4 text-center">Project {selectedProject} Details</h2>
+                        <p className="mb-4 text-lg text-gray-700">Here you can add detailed information about Project {selectedProject}.</p>
+                        <button
+                            onClick={closeModal}
+                            className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            )}
+        </div>
+    );
+};
+
+export default Projects;

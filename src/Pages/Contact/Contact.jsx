@@ -1,4 +1,3 @@
-import { FaArrowRight } from "react-icons/fa";
 import Banner from "../../Shared/Banner/Banner.jsx";
 import emailjs from '@emailjs/browser';
 import { useRef } from "react";
@@ -71,7 +70,7 @@ const Contact = () => {
                     </div>
                     <div className="text-center">
                         <button type="submit" className='bg-[#D9D9D9] py-2 px-5 inline-flex items-center gap-2 justify-center'>
-                            <FaArrowRight /> Contact me
+                            Send
                         </button>
                     </div>
                 </form>
