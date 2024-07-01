@@ -1,5 +1,6 @@
 import { useState } from 'react';
-// import { FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa';
 import Banner from "../../Shared/Banner/Banner.jsx";
 
 import project1 from "../../assets/images/project1.png";
@@ -13,8 +14,8 @@ const Projects = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
 
-    const openModal = (projectNumber) => {
-        setSelectedProject(projectNumber);
+    const openModal = (project) => {
+        setSelectedProject(project);
         setIsModalOpen(true);
     };
 
@@ -24,12 +25,139 @@ const Projects = () => {
     };
 
     const projects = [
-        { id: 1, image: project1, title: 'Project One', description: 'A brief description of Project One.' },
-        { id: 2, image: project2, title: 'Project Two', description: 'A brief description of Project Two.' },
-        { id: 3, image: project3, title: 'Project Three', description: 'A brief description of Project Three.' },
-        { id: 4, image: project4, title: 'Project Four', description: 'A brief description of Project Four.' },
-        { id: 5, image: project5, title: 'Project Five', description: 'A brief description of Project Five.' },
-        { id: 6, image: project6, title: 'Project Six', description: 'A brief description of Project Six.' }
+        {
+            id: 1,
+            image: project1,
+            title: 'Portfolio Website',
+            description: 'A personal portfolio website showcasing my projects and skills.',
+            liveLink: 'https://example.com/portfolio',
+            clientSide: 'https://github.com/username/portfolio-client',
+            serverSide: 'https://github.com/username/portfolio-server',
+            features: [
+                'Responsive design',
+                'Animated transitions',
+                'Contact form with email integration'
+            ],
+            technologies: [
+                'React',
+                'Tailwind CSS',
+                'Node.js',
+                'Express',
+                'MongoDB'
+            ]
+        },
+        {
+            id: 2,
+            image: project2,
+            title: 'E-commerce Store',
+            description: 'A fully functional e-commerce store with user authentication and payment gateway integration.',
+            liveLink: 'https://example.com/ecommerce',
+            clientSide: 'https://github.com/username/ecommerce-client',
+            serverSide: 'https://github.com/username/ecommerce-server',
+            features: [
+                'User authentication',
+                'Product search and filtering',
+                'Shopping cart and checkout',
+                'Payment gateway integration'
+            ],
+            technologies: [
+                'Next.js',
+                'Tailwind CSS',
+                'Node.js',
+                'Express',
+                'MongoDB',
+                'Stripe'
+            ]
+        },
+        {
+            id: 3,
+            image: project3,
+            title: 'Blog Platform',
+            description: 'A modern blog platform with markdown support and user comments.',
+            liveLink: 'https://example.com/blog',
+            clientSide: 'https://github.com/username/blog-client',
+            serverSide: 'https://github.com/username/blog-server',
+            features: [
+                'Markdown support for posts',
+                'User comments',
+                'Admin dashboard for managing posts'
+            ],
+            technologies: [
+                'React',
+                'Redux',
+                'Node.js',
+                'Express',
+                'MongoDB'
+            ]
+        },
+        {
+            id: 4,
+            image: project4,
+            title: 'Social Media App',
+            description: 'A social media application with real-time messaging and notifications.',
+            liveLink: 'https://example.com/socialmedia',
+            clientSide: 'https://github.com/username/socialmedia-client',
+            serverSide: 'https://github.com/username/socialmedia-server',
+            features: [
+                'Real-time messaging',
+                'User notifications',
+                'Post sharing and liking',
+                'Profile customization'
+            ],
+            technologies: [
+                'React',
+                'Framer Motion',
+                'Node.js',
+                'Express',
+                'Socket.io',
+                'MongoDB'
+            ]
+        },
+        {
+            id: 5,
+            image: project5,
+            title: 'Task Management Tool',
+            description: 'A task management tool to organize and track your daily tasks.',
+            liveLink: 'https://example.com/taskmanager',
+            clientSide: 'https://github.com/username/taskmanager-client',
+            serverSide: 'https://github.com/username/taskmanager-server',
+            features: [
+                'Task creation and editing',
+                'Due date reminders',
+                'Priority setting',
+                'Kanban board view'
+            ],
+            technologies: [
+                'React',
+                'Tailwind CSS',
+                'Node.js',
+                'Express',
+                'Firebase'
+            ]
+        },
+        {
+            id: 6,
+            image: project6,
+            title: 'Online Learning Platform',
+            description: 'An online learning platform with courses, quizzes, and certification.',
+            liveLink: 'https://example.com/learning',
+            clientSide: 'https://github.com/username/learning-client',
+            serverSide: 'https://github.com/username/learning-server',
+            features: [
+                'Course creation and enrollment',
+                'Interactive quizzes',
+                'Progress tracking',
+                'Certificate generation'
+            ],
+            technologies: [
+                'React',
+                'Next.js',
+                'Node.js',
+                'Express',
+                'MongoDB',
+                'AWS S3'
+            ]
+        }
     ];
 
     return (
@@ -43,13 +171,16 @@ const Projects = () => {
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project) => (
                         <div
+                            data-aos="fade-up"
+                            data-aos-easing="ease-in-out"
+                            data-aos-delay="300"
                             key={project.id}
-                            className="relative bg-cover bg-center bg-no-repeat h-96 w-auto lg:w-[500px] rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+                            className="relative bg-cover bg-center bg-no-repeat h-96 w-auto lg:w-[500px] rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300"
                             style={{ backgroundImage: `url(${project.image})` }}
                         >
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                 <button
-                                    onClick={() => openModal(project.id)}
+                                    onClick={() => openModal(project)}
                                     className="text-white text-lg bg-black bg-opacity-75 px-5 py-3 uppercase rounded-md"
                                 >
                                     View Details
@@ -59,21 +190,60 @@ const Projects = () => {
                     ))}
                 </div>
             </div>
+            <div className='lg:mt-20 mt-10 flex justify-center'>
+                <div>
+                    <Link to="/contact" className='bg-[#D9D9D9] py-2 px-5 flex items-center gap-2'>
+                        <FaArrowRight /> Contact me
+                    </Link>
+                </div>
+            </div>
 
-            {isModalOpen && (
+            {isModalOpen && selectedProject && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                    <div data-aos="slide-down" className="bg-white mx-2 p-8 rounded-lg shadow-lg max-w-lg lg:mx-auto">
-                        <h2 className="text-3xl font-bold mb-4 text-center">Project {selectedProject} Details</h2>
-                        <p className="mb-4 text-lg text-gray-700">Here you can add detailed information about Project {selectedProject}.</p>
-                        <button
-                            onClick={closeModal}
-                            className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300"
-                        >
-                            Close
-                        </button>
+                    <div data-aos="slide-down" className="bg-white mx-2 p-8 rounded-lg shadow-lg max-w-3xl w-full max-h-[80vh] overflow-y-auto lg:mx-auto">
+                        <div className="flex justify-between items-center mb-4">
+                            <h2 className="text-3xl font-bold">{selectedProject.title}</h2>
+                            <button
+                                onClick={closeModal}
+                                className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition-colors duration-300"
+                            >
+                                Close
+                            </button>
+                        </div>
+                        <img src={selectedProject.image} alt={selectedProject.title} className="mb-4 w-full rounded-lg" />
+                        <p className="mb-4 text-lg text-gray-700">{selectedProject.description}</p>
+                        <div className="mb-4">
+                            <h3 className="font-bold text-xl mb-2">Features:</h3>
+                            <ul className="list-disc list-inside text-gray-700">
+                                {selectedProject.features.map((feature, index) => (
+                                    <li key={index}>{feature}</li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="mb-4">
+                            <h3 className="font-bold text-xl mb-2">Technologies:</h3>
+                            <ul className="list-disc list-inside text-gray-700">
+                                {selectedProject.technologies.map((technology, index) => (
+                                    <li key={index}>{technology}</li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="flex justify-between items-center mt-4">
+                            <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 text-lg font-semibold underline">
+                                Live Link
+                            </a>
+                            <a href={selectedProject.clientSide} target="_blank" rel="noopener noreferrer" className="text-blue-500 text-lg font-semibold underline">
+                                Client Side
+                            </a>
+                            <a href={selectedProject.serverSide} target="_blank" rel="noopener noreferrer" className="text-blue-500 text-lg font-semibold underline">
+                                Server Side
+                            </a>
+                        </div>
                     </div>
                 </div>
             )}
+
+
         </div>
     );
 };

@@ -14,12 +14,21 @@ import npm from "../../assets/images/npm.png"
 import stripe from "../../assets/images/stripe.png"
 import ts from "../../assets/images/ts.png"
 import ssl from "../../assets/images/ssl.png"
+import kawser from "../../assets/images/kawser.jpg"
 
 const AboutSkills = () => {
     return (
         <div className="lg:max-w-2xl max-w-xl lg:mx-auto mx-3 mt-20 lg:mt-28">
             <div>
-                <div>
+                <div className="flex items-center justify-center">
+                    <img
+                        data-aos="zoom-out"
+                        data-aos-easing="ease-in-out"
+                        data-aos-delay="300"
+                        className="rounded-full border-2 p-2 bg-slate-500"
+                        src={kawser} alt="kawser" />
+                </div>
+                <div className="mt-16">
                     <h4 className="league-spartan lg:text-left text-center text-3xl font-bold">About Me</h4>
                     <p className="roboto mt-2 text-lg">Aspiring Front-End Developer with nearly a year of intensive learning and practical experience in HTML, CSS, JavaScript, and React. Dedicated to crafting responsive, user-centric web applications and continuously exploring emerging technologies. Driven to contribute and grow within a dynamic, collaborative team environment.</p>
                 </div>
