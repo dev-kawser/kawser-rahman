@@ -22,9 +22,6 @@ const AboutSkills = () => {
             <div>
                 <div className="flex items-center justify-center">
                     <img
-                        data-aos="zoom-out"
-                        data-aos-easing="ease-in-out"
-                        data-aos-delay="300"
                         className="rounded-full border-2 p-2 bg-slate-500"
                         src={kawser} alt="kawser" />
                 </div>

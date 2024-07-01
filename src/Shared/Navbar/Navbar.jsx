@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="relative bg-black">
             <div className="container px-5 lg:mx-auto flex justify-between items-center">
                 <Link to="/">
-                    <img className="lg:size-40 size-24" src={logo} alt="logo" />
+                    <img className="lg:size-40 size-32" src={logo} alt="logo" />
                 </Link>
                 <div>
                     <button className="text-4xl text-white" onClick={handleToggle}>
