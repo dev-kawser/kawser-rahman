@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div>
             <Banner
-                h1={"MD Kawser Ferodus Safi"}
+                h1={"Kawser Ferodus Safi"}
                 h3={"WEB-developer"}
             ></Banner>
             <AboutSkills></AboutSkills>

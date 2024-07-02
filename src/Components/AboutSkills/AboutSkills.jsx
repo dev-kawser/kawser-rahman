@@ -18,18 +18,18 @@ import kawser from "../../assets/images/kawser.jpg"
 
 const AboutSkills = () => {
     return (
-        <div className="lg:max-w-2xl max-w-xl lg:mx-auto mx-3 mt-20 lg:mt-28">
+        <div className="lg:max-w-2xl max-w-xl lg:mx-auto mx-3 mt-16 lg:mt-28">
             <div>
                 <div className="flex items-center justify-center">
                     <img
-                        className="rounded-full border-2 p-2 bg-slate-500"
+                        className="rounded-full lg:w-[512px] w-72 border-2 p-2 bg-slate-500"
                         src={kawser} alt="kawser" />
                 </div>
-                <div className="mt-16">
+                <div className="lg:mt-16 mt-12">
                     <h4 className="league-spartan lg:text-left text-center text-3xl font-bold">About Me</h4>
                     <p className="roboto mt-2 text-lg">Aspiring Front-End Developer with nearly a year of intensive learning and practical experience in HTML, CSS, JavaScript, and React. Dedicated to crafting responsive, user-centric web applications and continuously exploring emerging technologies. Driven to contribute and grow within a dynamic, collaborative team environment.</p>
                 </div>
-                <div className="mt-16">
+                <div className="lg:mt-16 mt-12">
                     <h4 className="league-spartan lg:text-left text-center text-3xl font-bold">My Skills</h4>
                     <div className="roboto font-medium lg:ml-0 ml-8 mt-4 grid grid-cols-2 lg:grid-cols-4 gap-4 space-y-3">
                         <div className="flex items-center gap-2">
