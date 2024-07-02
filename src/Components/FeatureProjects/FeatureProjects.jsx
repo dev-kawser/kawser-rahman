@@ -26,39 +26,18 @@ const FeatureProjects = () => {
             id: 1,
             image: project1,
             title: 'Portfolio Website',
-            description: 'A personal portfolio website showcasing my projects and skills.',
-            liveLink: 'https://example.com/portfolio',
-            clientSide: 'https://github.com/username/portfolio-client',
-            serverSide: 'https://github.com/username/portfolio-server',
+            description: 'Your Ultimate Contest Platform',
+            liveLink: 'https://photo-contest-cb4ef.web.app/',
+            clientSide: 'https://github.com/dev-kawser/winzone-client',
+            serverSide: 'https://github.com/dev-kawser/winzone-server',
             features: [
-                'Responsive design',
-                'Animated transitions',
-                'Contact form with email integration'
+                'Payment System',
+                'CRUD',
+                'User comments',
+                'Admin dashboard for managing posts'
             ],
             technologies: [
                 'React',
-                'Tailwind CSS',
-                'Node.js',
-                'Express',
-                'MongoDB'
-            ]
-        },
-        {
-            id: 2,
-            image: project2,
-            title: 'E-commerce Store',
-            description: 'A fully functional e-commerce store with user authentication and payment gateway integration.',
-            liveLink: 'https://example.com/ecommerce',
-            clientSide: 'https://github.com/username/ecommerce-client',
-            serverSide: 'https://github.com/username/ecommerce-server',
-            features: [
-                'User authentication',
-                'Product search and filtering',
-                'Shopping cart and checkout',
-                'Payment gateway integration'
-            ],
-            technologies: [
-                'Next.js',
                 'Tailwind CSS',
                 'Node.js',
                 'Express',
@@ -67,24 +46,46 @@ const FeatureProjects = () => {
             ]
         },
         {
-            id: 3,
-            image: project3,
-            title: 'Blog Platform',
-            description: 'A modern blog platform with markdown support and user comments.',
-            liveLink: 'https://example.com/blog',
-            clientSide: 'https://github.com/username/blog-client',
-            serverSide: 'https://github.com/username/blog-server',
+            id: 2,
+            image: project2,
+            title: 'Query Website',
+            description: 'Your ultimate destination for smartphone reviews, comparisons, buying guides, and more!',
+            liveLink: 'https://smart-tech-project.web.app/',
+            clientSide: 'https://github.com/dev-kawser/query-website-client',
+            serverSide: 'https://github.com/dev-kawser/query-website-server',
             features: [
-                'Markdown support for posts',
-                'User comments',
-                'Admin dashboard for managing posts'
+                'User authentication',
+                'CRUD',
+                'Add comments',
+                'Add recommendation',
             ],
             technologies: [
+                'Tailwind CSS',
                 'React',
-                'Redux',
                 'Node.js',
                 'Express',
-                'MongoDB'
+                'MongoDB',
+            ]
+        },
+        {
+            id: 3,
+            image: project3,
+            title: 'BUS Ticket Counter',
+            description: 'A modern bus ticket counter web application.',
+            liveLink: 'https://devsafi.github.io/safi-travels/',
+            clientSide: 'https://github.com/dev-kawser/s-travels',
+            serverSide: 'https://github.com/dev-kawser/s-travels',
+            features: [
+                'Responsive Design',
+                'Buy Ticket',
+                'Discount features'
+            ],
+            technologies: [
+                'HTML',
+                'CSS',
+                'Tailwind',
+                'JavaScript',
+                'DOM'
             ]
         },
     ];

@@ -18,6 +18,12 @@ const About = () => {
                             I am a dedicated Front-End Developer with nearly a year of intensive learning and practical experience. My journey began with HTML, CSS, and JavaScript, and I have since developed a strong proficiency in React. I am passionate about crafting responsive, user-centric web applications that are both functional and aesthetically pleasing. I thrive in dynamic, collaborative team environments and am constantly seeking opportunities to learn and grow. My commitment to continuous learning has led me to explore emerging technologies and best practices in web development, ensuring that I stay at the forefront of the industry.
                         </p>
                     </div>
+                    <div>
+                        <h4 className="league-spartan lg:text-left text-center text-3xl font-bold mt-16">My Education</h4>
+                        <p className="roboto mt-2 text-lg">
+                            I am a driven and results-oriented student currently pursuing a Diploma in Computer Science and Technology (CST) since 2022. Prior to this, I successfully completed my Secondary School Certificate (SSC) in 2020. My passion for web development led me to further my skills at Programming Hero Institute, demonstrating my commitment to continuous learning.
+                        </p>
+                    </div>
                     <div className="mt-16">
                         <h4 className="league-spartan lg:text-left text-center text-3xl font-bold">My Goals and Interests</h4>
                         <p className="roboto mt-2 text-lg">

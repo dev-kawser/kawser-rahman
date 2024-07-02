@@ -4,7 +4,10 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/images/k-logo.png";
 import { IoClose } from 'react-icons/io5';
 
+
+
 const Navbar = () => {
+
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
 
@@ -12,8 +15,10 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     };
 
+
+
     return (
-        <div className="relative bg-black">
+        <div className="relative bg-black z-10">
             <div className="container px-5 lg:mx-auto flex justify-between items-center">
                 <Link to="/">
                     <img className="lg:size-40 size-28 lg:ml-0 -ml-5" src={logo} alt="logo" />

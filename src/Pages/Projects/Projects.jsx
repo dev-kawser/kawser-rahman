@@ -29,39 +29,18 @@ const Projects = () => {
             id: 1,
             image: project1,
             title: 'Portfolio Website',
-            description: 'A personal portfolio website showcasing my projects and skills.',
-            liveLink: 'https://example.com/portfolio',
-            clientSide: 'https://github.com/username/portfolio-client',
-            serverSide: 'https://github.com/username/portfolio-server',
+            description: 'Your Ultimate Contest Platform',
+            liveLink: 'https://photo-contest-cb4ef.web.app/',
+            clientSide: 'https://github.com/dev-kawser/winzone-client',
+            serverSide: 'https://github.com/dev-kawser/winzone-server',
             features: [
-                'Responsive design',
-                'Animated transitions',
-                'Contact form with email integration'
+                'Payment System',
+                'CRUD',
+                'User comments',
+                'Admin dashboard for managing posts'
             ],
             technologies: [
                 'React',
-                'Tailwind CSS',
-                'Node.js',
-                'Express',
-                'MongoDB'
-            ]
-        },
-        {
-            id: 2,
-            image: project2,
-            title: 'E-commerce Store',
-            description: 'A fully functional e-commerce store with user authentication and payment gateway integration.',
-            liveLink: 'https://example.com/ecommerce',
-            clientSide: 'https://github.com/username/ecommerce-client',
-            serverSide: 'https://github.com/username/ecommerce-server',
-            features: [
-                'User authentication',
-                'Product search and filtering',
-                'Shopping cart and checkout',
-                'Payment gateway integration'
-            ],
-            technologies: [
-                'Next.js',
                 'Tailwind CSS',
                 'Node.js',
                 'Express',
@@ -70,21 +49,43 @@ const Projects = () => {
             ]
         },
         {
+            id: 2,
+            image: project2,
+            title: 'Query Website',
+            description: 'Your ultimate destination for smartphone reviews, comparisons, buying guides, and more!',
+            liveLink: 'https://smart-tech-project.web.app/',
+            clientSide: 'https://github.com/dev-kawser/query-website-client',
+            serverSide: 'https://github.com/dev-kawser/query-website-server',
+            features: [
+                'User authentication',
+                'CRUD',
+                'Add comments',
+                'Add recommendation',
+            ],
+            technologies: [
+                'Tailwind CSS',
+                'React',
+                'Node.js',
+                'Express',
+                'MongoDB',
+            ]
+        },
+        {
             id: 3,
             image: project3,
-            title: 'Blog Platform',
-            description: 'A modern blog platform with markdown support and user comments.',
-            liveLink: 'https://example.com/blog',
-            clientSide: 'https://github.com/username/blog-client',
-            serverSide: 'https://github.com/username/blog-server',
+            title: 'Artistic Avenue',
+            description: 'Welcome to Artistic Avenue, where creativity knows no bounds. Explore, share, and learn within our vibrant community of artists and art enthusiasts.',
+            liveLink: 'https://art-and-craft-cdc17.web.app/',
+            clientSide: 'https://github.com/dev-kawser/artistic-avenue-client',
+            serverSide: 'https://github.com/dev-kawser/artistic-avenue-server',
             features: [
-                'Markdown support for posts',
-                'User comments',
-                'Admin dashboard for managing posts'
+                'Responsive UI',
+                'Animated Element',
+                'CRUD'
             ],
             technologies: [
                 'React',
-                'Redux',
+                'Tailwind',
                 'Node.js',
                 'Express',
                 'MongoDB'
@@ -93,69 +94,62 @@ const Projects = () => {
         {
             id: 4,
             image: project4,
-            title: 'Social Media App',
-            description: 'A social media application with real-time messaging and notifications.',
-            liveLink: 'https://example.com/socialmedia',
-            clientSide: 'https://github.com/username/socialmedia-client',
-            serverSide: 'https://github.com/username/socialmedia-server',
+            title: 'Hockey Haven',
+            description: 'Responsive front end static application',
+            liveLink: 'https://devsafi.github.io/hockey-haven/',
+            clientSide: 'https://github.com/dev-kawser/hokcey-haven',
+            serverSide: 'https://github.com/dev-kawser/hokcey-haven',
             features: [
-                'Real-time messaging',
-                'User notifications',
-                'Post sharing and liking',
-                'Profile customization'
+                'Responsive Design',
+                'Interactive UI',
             ],
             technologies: [
-                'React',
-                'Framer Motion',
-                'Node.js',
-                'Express',
-                'Socket.io',
-                'MongoDB'
+                'HTML',
+                'CSS',
+                'Tailwind',
+                'JavaScript',
+                'DOM'
             ]
         },
         {
             id: 5,
             image: project5,
-            title: 'Task Management Tool',
-            description: 'A task management tool to organize and track your daily tasks.',
-            liveLink: 'https://example.com/taskmanager',
-            clientSide: 'https://github.com/username/taskmanager-client',
-            serverSide: 'https://github.com/username/taskmanager-server',
+            title: 'BUS Ticket Counter',
+            description: 'A modern bus ticket counter web application.',
+            liveLink: 'https://devsafi.github.io/safi-travels/',
+            clientSide: 'https://github.com/dev-kawser/s-travels',
+            serverSide: 'https://github.com/dev-kawser/s-travels',
             features: [
-                'Task creation and editing',
-                'Due date reminders',
-                'Priority setting',
-                'Kanban board view'
+                'Responsive Design',
+                'Buy Ticket',
+                'Discount features'
             ],
             technologies: [
-                'React',
-                'Tailwind CSS',
-                'Node.js',
-                'Express',
-                'Firebase'
+                'HTML',
+                'CSS',
+                'Tailwind',
+                'JavaScript',
+                'DOM'
             ]
         },
         {
             id: 6,
             image: project6,
-            title: 'Online Learning Platform',
-            description: 'An online learning platform with courses, quizzes, and certification.',
-            liveLink: 'https://example.com/learning',
-            clientSide: 'https://github.com/username/learning-client',
-            serverSide: 'https://github.com/username/learning-server',
+            title: 'Travel Agency',
+            description: 'Responsive front end static application',
+            liveLink: 'https://devsafi.github.io/travel-agency/',
+            clientSide: 'https://github.com/dev-kawser/travel-agency',
+            serverSide: 'https://github.com/dev-kawser/travel-agency',
             features: [
-                'Course creation and enrollment',
-                'Interactive quizzes',
-                'Progress tracking',
-                'Certificate generation'
+                'Responsive Design',
+                'Interactive UI',
             ],
             technologies: [
-                'React',
-                'Next.js',
-                'Node.js',
-                'Express',
-                'MongoDB',
-                'AWS S3'
+                'HTML',
+                'CSS',
+                'Tailwind',
+                'JavaScript',
+                'DOM'
             ]
         }
     ];
