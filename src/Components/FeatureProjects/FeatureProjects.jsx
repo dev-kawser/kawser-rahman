@@ -25,7 +25,7 @@ const FeatureProjects = () => {
         {
             id: 1,
             image: project1,
-            title: 'Portfolio Website',
+            title: 'Contest Website',
             description: 'Your Ultimate Contest Platform',
             liveLink: 'https://photo-contest-cb4ef.web.app/',
             clientSide: 'https://github.com/dev-kawser/winzone-client',
@@ -99,7 +99,7 @@ const FeatureProjects = () => {
                 {projects.map((project) => (
                     <div
                         key={project.id}
-                        className="relative bg-cover bg-center bg-no-repeat h-96 w-auto lg:w-[500px] rounded-lg shadow-xl overflow-hidden transform transition-transform duration-300"
+                        className="relative bg-cover bg-center bg-no-repeat h-[50vh] lg:h-96 w-auto lg:w-[500px] rounded-lg shadow-xl overflow-hidden transform transition-transform duration-300"
                         style={{ backgroundImage: `url(${project.image})` }}
                     >
                         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
